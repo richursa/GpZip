@@ -4,20 +4,27 @@
 #include<string.h>
 #include "src/blockSort/blockSort.h"
 using namespace std;
+void initializeIndex(int pIndexArray[],int pSize)
+{
+    for(int i=0;i<pSize;i++)
+    {
+        pIndexArray[i] = i;
+    }
+}
+void printTransformedString(char pStringArray[],int pIndexArray[] , int pSize)
+{
+    for(int i =0 ;i<pSize;i++)
+    {
+        cout<<pStringArray[pIndexArray[i]+pSize-1];
+    }
+}
 int main()
 {
     char stringArray[1024];
-    cout<<"enter the string";
     cin>>stringArray;
     int size = strlen(stringArray);
-    int pointerArray[1024];
-    for(int i=0;i<size;i++)
-    {
-        pointerArray[i] = i;
-    }
-    stringBubbleSort(stringArray,pointerArray,size);
-    for(int i =0 ;i<size;i++)
-    {
-        cout<<stringArray[pointerArray[i]+size-1];
-    }
+    int indexArray[1024];
+    initializeIndex(indexArray,size);
+    stringBubbleSort(stringArray,indexArray,size);
+    printTransformedString(stringArray,indexArray,size);
 }
