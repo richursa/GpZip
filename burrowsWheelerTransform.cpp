@@ -20,10 +20,10 @@ void printTransformedString(char pStringArray[],int pIndexArray[] , int pSize)
 }
 int main()
 {
-    char stringArray[1024];
+    char stringArray[102400];
     cin>>stringArray;
     int size = strlen(stringArray);
-    int indexArray[1024];
+    int indexArray[102400];
     initializeIndex(indexArray,size);
     stringBubbleSort(stringArray,indexArray,size);
     printTransformedString(stringArray,indexArray,size);
