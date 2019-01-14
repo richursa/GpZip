@@ -2,12 +2,13 @@
 #include "string/stringCompare.h"
 #include "string/stringCopy.h"
 #include "swap.h"
+#include <string.h>
 //the indexes of all rotations of pStringArray are given in pIndexArray 
 //pIndexArray is sorted according to how the rotations of pStringArray 
 //will be displayed in a dictionary
 void stringBubbleSort(char pStringArray[],int pIndexArray[], int pSize) 
 {
-    stringConcateneteWithSelf(pStringArray,pSize);
+    memcpy(pStringArray+pSize,pStringArray,pSize);
     for(int  i =0 ;i<pSize;i++)
     {
         for(int j=0;j<pSize-1;j++)
