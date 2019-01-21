@@ -1,6 +1,5 @@
 //GpZip 13-01-2019 4.54PM IST
 #include "string/stringCompare.h"
-#include "string/stringCopy.h"
 #include "swap.h"
 #include <string.h>
 //the indexes of all rotations of pStringArray are given in pIndexArray 
