@@ -20,6 +20,7 @@ void printTransformedString(char pStringArray[],int pIndexArray[] , int pSize)
 }
 int main()
 {
+    //hi
     char stringArray[102400];
     cin>>stringArray;
     int size = strlen(stringArray);
